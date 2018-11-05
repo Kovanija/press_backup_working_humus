@@ -1,0 +1,40 @@
+{
+  "name": "newscraper-express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "cyrillic-to-latin": "^2.0.0",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "fs-writefile-promise": "^3.0.0",
+    "has-cyr": "^1.0.3",
+    "html2canvas": "^1.0.0-alpha.12",
+    "htmlto": "^1.1.2",
+    "http-errors": "~1.6.2",
+    "hummus": "^1.0.90",
+    "hummus-recipe": "^1.7.5",
+    "jade": "~1.11.0",
+    "jspdf": "^1.4.1",
+    "keyword-highlighter": "^1.0.6",
+    "latin-to-serbian-cyrillic": "^1.0.2",
+    "morgan": "~1.9.0",
+    "nightmare": "^3.0.1",
+    "ontime": "0.0.6",
+    "pdf-extract": "^1.0.11",
+    "pdf-text-extract": "^1.5.0",
+    "pdfkit": "^0.8.3",
+    "pdftotextjs": "^0.5.1",
+    "phantom": "^6.0.3",
+    "phantomjs": "^2.1.7",
+    "request": "^2.88.0",
+    "textract": "^2.4.0",
+    "urllib": "^2.29.1"
+  }
+}
