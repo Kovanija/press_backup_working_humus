@@ -59,7 +59,7 @@ app.use(function(req, res, next) {
 // SET DIFFERENT TIME FOR EACH CRONE
 
 ontime({
-  cycle: [ '16:25:00' ]
+  cycle: [ '02:48:00' ]
 }, function (ot) {
   axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
   .then( async response =>{
@@ -84,7 +84,7 @@ ontime({
 
 
 ontime({
-  cycle: [ '09:38:00' ]
+  cycle: [ '02:52:00' ]
 }, function (ot) {
   console.log("CRONE JOB")
   axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
@@ -108,7 +108,7 @@ ontime({
 })
 
 ontime({
-  cycle: [ '09:40:00' ]
+  cycle: [ '02:56:00' ]
 }, function (ot) {
   console.log("CRONE JOB")
   axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
@@ -140,7 +140,7 @@ ontime({
 // --- FINISHTIME OF EXTRACTPDF FUNCTION DEPENDS OF AMOUNT OF FILES IN SOURCE FOLDER AND NUMBER OF COMPANIES
 
 ontime({
-  cycle: [ '16:31:00' ]
+  cycle: [ '03:18:00' ]
 }, function (ot) {
   axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
   .then( async response => {
@@ -169,7 +169,7 @@ ontime({
 //--- IT READS FILES FROM PUBLIC/OUTPUT/ FOLDER AND AFTER SENDS AXIOS.POST --//
 
 ontime({
-  cycle: [ '10:11:00' ]
+  cycle: [ '03:23:00' ]
 }, function (ot) {
   let today = new Date();
   let pdfSingleArr = []
