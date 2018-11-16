@@ -140,7 +140,7 @@ ontime({
 // --- FINISHTIME OF EXTRACTPDF FUNCTION DEPENDS OF AMOUNT OF FILES IN SOURCE FOLDER AND NUMBER OF COMPANIES
 
 ontime({
-  cycle: [ '03:18:00' ]
+  cycle: [ '03:10:00' ]
 }, function (ot) {
   axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
   .then( async response => {
@@ -169,7 +169,7 @@ ontime({
 //--- IT READS FILES FROM PUBLIC/OUTPUT/ FOLDER AND AFTER SENDS AXIOS.POST --//
 
 ontime({
-  cycle: [ '03:23:00' ]
+  cycle: [ '03:14:00' ]
 }, function (ot) {
   let today = new Date();
   let pdfSingleArr = []
