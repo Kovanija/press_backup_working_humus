@@ -61,7 +61,7 @@ app.use(function(req, res, next) {
 ontime({
   cycle: [ '02:48:00' ]
 }, function (ot) {
-  axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
+  axios.get('https://press-clip-new.herokuapp.com/api/companies?api_key=23')
   .then( async response =>{
     if (response.data.success == true) {
       let companies = response.data.company
@@ -84,10 +84,10 @@ ontime({
 
 
 ontime({
-  cycle: [ '02:52:00' ]
+  cycle: [ '11:59:00' ]
 }, function (ot) {
   console.log("CRONE JOB")
-  axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
+  axios.get('https://press-clip-new.herokuapp.com/api/companies?api_key=23')
   .then( async response => {
     if (response.data.success == true) {
       let companies = response.data.company
@@ -111,7 +111,7 @@ ontime({
   cycle: [ '02:56:00' ]
 }, function (ot) {
   console.log("CRONE JOB")
-  axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
+  axios.get('https://press-clip-new.herokuapp.com/api/companies?api_key=23')
   .then( async response => {
     if (response.data.success == true) {
       let companies = response.data.company
@@ -140,9 +140,9 @@ ontime({
 // --- FINISHTIME OF EXTRACTPDF FUNCTION DEPENDS OF AMOUNT OF FILES IN SOURCE FOLDER AND NUMBER OF COMPANIES
 
 ontime({
-  cycle: [ '03:10:00' ]
+  cycle: [ '12:58:00' ]
 }, function (ot) {
-  axios.get('https://press-cliping.herokuapp.com/api/companies?api_key=23')
+  axios.get('https://press-clip-new.herokuapp.com/api/companies?api_key=23')
   .then( async response => {
     if (response.data.success == true) {
          let today = new Date();
@@ -169,7 +169,7 @@ ontime({
 //--- IT READS FILES FROM PUBLIC/OUTPUT/ FOLDER AND AFTER SENDS AXIOS.POST --//
 
 ontime({
-  cycle: [ '03:14:00' ]
+  cycle: [ '12:59:00' ]
 }, function (ot) {
   let today = new Date();
   let pdfSingleArr = []
@@ -193,7 +193,7 @@ ontime({
       data => 
       axios({
        method:'POST',
-       url:'https://press-cliping.herokuapp.com/api/printed?api_key=23',
+       url:'https://press-clip-new.herokuapp.com/api/printed?api_key=23',
        data:{
         api_key:"sdsd",
         data:data

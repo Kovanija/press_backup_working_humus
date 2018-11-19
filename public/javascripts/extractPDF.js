@@ -110,13 +110,20 @@ async function takeText(single, keywords, outputFolder) {
 }
 
 function writeHmtl(obj) {
+  
+  let foundKeywords = "<div>";
   let keyword = obj.keywords
   keyword.forEach(word => {
     if (hasCyr(obj.text)) {
       word = convertToCyr(word)
     }
+    var check = obj.text.includes(word);
+    if(check)
+      foundKeywords += word + ", ";
     obj.text = obj.text.replace(new RegExp(word, 'g'), "<span style ='color:red'><b>" + word.toUpperCase() + "</b></span>")
   })
+    foundKeywords += "</div>";
+    obj.text = foundKeywords + obj.text;
   fs.writeFile(obj.link, obj.text, function (err) {
     if (err) throw err;
   }
